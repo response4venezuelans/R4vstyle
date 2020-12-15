@@ -15,7 +15,7 @@ Utility functions to access and plot color palettes
     hex2 <- col2hex("white", alpha = 255/2)
     hex3 <- col2hex("gold", alpha = 255/2)
     hex4 <- col2hex("steelblue", alpha = 255/2)
-    seecol(pal = c(hex1, hex2, hex3, hex4), n = "all")
+    # seecol(pal = c(hex1, hex2, hex3, hex4), n = 'all')
 }
 }
 \author{

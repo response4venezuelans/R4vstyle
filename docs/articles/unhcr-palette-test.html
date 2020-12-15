@@ -62,7 +62,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/unhcr-web/unhcRstyle/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -76,8 +76,7 @@
 
       
 
-      </header><script src="unhcr-palette-test_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="unhcr-palette-test_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="unhcr-palette-test_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
+      </header><script src="unhcr-palette-test_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Demonstrating UNHCR Palette</h1>
@@ -93,20 +92,20 @@
 <div id="set-up-load-packages" class="section level2">
 <h2 class="hasAnchor">
 <a href="#set-up-load-packages" class="anchor"></a>Set Up: load packages</h2>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/unhcr-web/unhcRstyle">unhcRstyle</a></span><span class="op">)</span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/unhcr-web/unhcRstyle">unhcRstyle</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://scales.r-lib.org">scales</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div id="key-colors" class="section level2">
 <h2 class="hasAnchor">
 <a href="#key-colors" class="anchor"></a>Key Colors</h2>
 <p>The colors in the discrete palette are:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">test_pal</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">test_pal</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-2-1.png" width="700"></p>
-<div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">unhcr_pal</span><span class="op">)</span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">unhcr_pal</span><span class="op">)</span>
 <span class="co">#&gt; Warning in rect(col(colours) - 1, -row(colours) + 1, col(colours),</span>
 <span class="co">#&gt; -row(colours), : supplied color is neither numeric nor character</span>
 
@@ -141,92 +140,92 @@
 <span class="co">#&gt; -row(colours), : supplied color is neither numeric nor character</span>
 
 <span class="co">#&gt; Warning in rect(col(colours) - 1, -row(colours) + 1, col(colours),</span>
-<span class="co">#&gt; -row(colours), : supplied color is neither numeric nor character</span></pre></div>
+<span class="co">#&gt; -row(colours), : supplied color is neither numeric nor character</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
 <p>The colors used to define the continuous palette spectrum are:</p>
-<div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">test_pal_cont</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">test_pal_cont</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
 <p>The colors used in the diverging palette are:</p>
-<div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">test_pal_div</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">scales</span><span class="fu">::</span><span class="fu"><a href="https://scales.r-lib.org//reference/show_col.html">show_col</a></span><span class="op">(</span><span class="va">test_pal_div</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-5-1.png" width="700"></p>
 </div>
 <div id="discrete-palettes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#discrete-palettes" class="anchor"></a>Discrete Palettes</h2>
 <p>Consider the following plots:</p>
-<div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="co"># make fake data for plots ----</span>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># make fake data for plots ----</span>
 <span class="va">points</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, y <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">10</span><span class="op">)</span>
 
 <span class="co"># make plots for themes ----</span>
 <span class="va">g_points</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">points</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, col <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
             <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span>
             <span class="fu"><a href="../reference/unhcr_theme.html">unhcr_theme</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">g_points</span></pre></div>
+<span class="va">g_points</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
-<div class="sourceCode" id="cb7"><pre class="downlit">
-<span class="va">distrb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">10</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">distrb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html">rep</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">10</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="fl">60</span>, <span class="fl">0</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span>
 <span class="va">g_distrb</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">distrb</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">y</span>, fill <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
             <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
             <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="va">.</span> <span class="op">~</span> <span class="va">x</span>, ncol <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op">+</span>
             <span class="fu"><a href="../reference/unhcr_theme.html">unhcr_theme</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">g_distrb</span></pre></div>
+<span class="va">g_distrb</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
 <p>Fixed-length discrete palettes use the palette’s selected colors until they run out, then it uses grey for all additional levels of the aesthetic.</p>
-<div class="sourceCode" id="cb8"><pre class="downlit">
-<span class="va">g_points</span> <span class="op">+</span> <span class="fu"><a href="../reference/scale_custom.html">scale_color_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">g_points</span> <span class="op">+</span> <span class="fu"><a href="../reference/scale_custom.html">scale_color_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span>
 <span class="co">#&gt; Warning: This manual palette can handle a maximum of 4 values. You have supplied</span>
 <span class="co">#&gt; 10.Set parameter extend = TRUE if you wish to interpolate a broader spectrum of</span>
-<span class="co">#&gt; colors.</span></pre></div>
+<span class="co">#&gt; colors.</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-8-1.png" width="700"></p>
-<div class="sourceCode" id="cb9"><pre class="downlit">
-<span class="va">g_distrb</span> <span class="op">+</span>  <span class="fu"><a href="../reference/scale_custom.html">scale_fill_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">g_distrb</span> <span class="op">+</span>  <span class="fu"><a href="../reference/scale_custom.html">scale_fill_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span>
 <span class="co">#&gt; Warning: This manual palette can handle a maximum of 4 values. You have supplied</span>
 <span class="co">#&gt; 6.Set parameter extend = TRUE if you wish to interpolate a broader spectrum of</span>
-<span class="co">#&gt; colors.</span></pre></div>
+<span class="co">#&gt; colors.</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-8-2.png" width="700"></p>
 <p>Interpolated palettes extend the discrete palette by interpolating additional values.</p>
-<div class="sourceCode" id="cb10"><pre class="downlit">
-<span class="va">g_points</span> <span class="op">+</span> 
-  <span class="fu"><a href="../reference/scale_custom.html">scale_color_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span>, extend <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">g_points</span> <span class="op">+</span> 
+  <span class="fu"><a href="../reference/scale_custom.html">scale_color_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span>, extend <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
-<div class="sourceCode" id="cb11"><pre class="downlit">
-
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R">
 <span class="va">g_distrb</span> <span class="op">+</span> 
-  <span class="fu"><a href="../reference/scale_custom.html">scale_fill_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span>, extend <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></pre></div>
+  <span class="fu"><a href="../reference/scale_custom.html">scale_fill_discrete_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span>, extend <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-9-2.png" width="700"></p>
 <p>Opinionated palettes color specific values for “good”, “bad”, and “neutral” in your dataset.</p>
-<div class="sourceCode" id="cb12"><pre class="downlit">
-<span class="va">points</span><span class="op">$</span><span class="va">assessment</span> <span class="op">&lt;-</span> <span class="st">"neutral"</span>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">points</span><span class="op">$</span><span class="va">assessment</span> <span class="op">&lt;-</span> <span class="st">"neutral"</span>
 <span class="va">points</span><span class="op">$</span><span class="va">assessment</span><span class="op">[</span><span class="va">points</span><span class="op">$</span><span class="va">x</span> <span class="op">&gt;</span> <span class="fl">5</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"good"</span>
 <span class="va">points</span><span class="op">$</span><span class="va">assessment</span><span class="op">[</span><span class="va">points</span><span class="op">$</span><span class="va">x</span> <span class="op">&lt;</span> <span class="fl">3</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="st">"bad"</span>
 
 <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">points</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, col <span class="op">=</span> <span class="va">assessment</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
   <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> 
-  <span class="fu"><a href="../reference/scale_custom.html">scale_color_opinionated_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span></pre></div>
+  <span class="fu"><a href="../reference/scale_custom.html">scale_color_opinionated_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
 </div>
 <div id="continuous-palettes" class="section level2">
 <h2 class="hasAnchor">
 <a href="#continuous-palettes" class="anchor"></a>Continuous Palettes</h2>
 <p>Consider the following plots:</p>
-<div class="sourceCode" id="cb13"><pre class="downlit">
-<span class="va">g_points_cont</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">points</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, col <span class="op">=</span> <span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">g_points_cont</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">points</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, col <span class="op">=</span> <span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> 
                  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">5</span><span class="op">)</span> <span class="op">+</span>
                  <span class="fu"><a href="../reference/unhcr_theme.html">unhcr_theme</a></span><span class="op">(</span><span class="op">)</span>
-<span class="va">g_points_cont</span></pre></div>
+<span class="va">g_points_cont</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-11-1.png" width="700"></p>
 <p>Diverging palettes grow more extreme at the endpoints. You can specify the <code>midpoint</code> of where the center should be.</p>
-<div class="sourceCode" id="cb14"><pre class="downlit">
-<span class="va">g_points_cont</span> <span class="op">+</span> 
-  <span class="fu"><a href="../reference/scale_custom.html">scale_color_diverging_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span>, midpoint <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">g_points_cont</span> <span class="op">+</span> 
+  <span class="fu"><a href="../reference/scale_custom.html">scale_color_diverging_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span>, midpoint <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
 <p>Normal continuous scales gradually move between two ends of a spectrum.</p>
-<div class="sourceCode" id="cb15"><pre class="downlit">
-<span class="va">g_points_cont</span> <span class="op">+</span> 
-  <span class="fu"><a href="../reference/scale_custom.html">scale_color_continuous_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">g_points_cont</span> <span class="op">+</span> 
+  <span class="fu"><a href="../reference/scale_custom.html">scale_color_continuous_unhcr</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"test"</span><span class="op">)</span></code></pre></div>
 <p><img src="unhcr-palette-test_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
 </div>
   </div>

@@ -63,7 +63,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/unhcr-web/unhcRstyle/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -124,8 +124,8 @@
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
 <p>First make sure to have all your fonts - and specifically Lato - registered with R</p>
-<div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># install.packages("extrafont")</span>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("extrafont")</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/wch/extrafont">extrafont</a></span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/pkg/extrafont/man/font_import.html">font_import</a></span><span class="op">(</span><span class="op">)</span>
 <span class="fu">extrafont</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/extrafont/man/loadfonts.html">loadfonts</a></span><span class="op">(</span>device<span class="op">=</span><span class="st">"postscript"</span><span class="op">)</span>
@@ -144,10 +144,10 @@
 
 <span class="fu">font_families</span><span class="op">(</span><span class="op">)</span>
 <span class="co">## automatically use showtext for new devices</span>
-<span class="fu"><a href="https://rdrr.io/pkg/showtext/man/showtext_auto.html">showtext_auto</a></span><span class="op">(</span><span class="op">)</span> </pre></div>
+<span class="fu"><a href="https://rdrr.io/pkg/showtext/man/showtext_auto.html">showtext_auto</a></span><span class="op">(</span><span class="op">)</span> </code></pre></div>
 <p>Then, install this package from Github:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">'unhcr-web/unhcRstyle'</span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">'unhcr-web/unhcRstyle'</span><span class="op">)</span></code></pre></div>
 <p>Once the package installed, you should be able to create directly your report with the right template within Rstudio:</p>
 <p><img src="https://i.imgur.com/81VJFo5.jpg" alt="preview"></p>
 <p>This package requires a recent version of Pandoc (&gt;= 2.2.3). If you use RStudio, you are recommended to install the <a href="https://rstudio.com/products/rstudio/download/">latest version</a> (&gt;= 1.2.1335), which has bundled Pandoc 2.x, otherwise you need to install Pandoc separately.</p>

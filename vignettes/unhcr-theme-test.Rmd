@@ -11,10 +11,10 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   echo = TRUE,
-  comment = "#>",
-  fig.path = "figures/charts-",
-  out.width = "100%"
+  comment = "#>"
 )
+
+# ,  fig.path = "figures/charts-",   out.width = "100%"
 ```
 
 The [unhcRstyle](https://github.com/UNHCR-WEB/unhcRstyle) package sets the basic the visual elements that compose the UNHCR Brand. It includes some color palettes as well as a ggplot2 theme to help you create UNHCR branded charts and reports.
