@@ -18,7 +18,7 @@ A package with all necessary elements to quickly implement [UNHCR Brand style](h
    * Continuous color palette 
  
 3. Different [Rmarkdown __template __](https://bookdown.org/yihui/rmarkdown/document-templates.html) to quick-start any report or slides you need to prepare:
-   * Paginated report built on the top of pagedown. You can see an example through the  [UNHCR R Cookbook](https://unhcr-web.github.io/unhcRstyle/inst/examples/How_to_quickly_produce_statistical_reports.html)
+   * Paginated report built on the top of pagedown. You can see an example through the [default template](https://unhcr-web.github.io/unhcRstyle/inst/examples/example.html) and the  [UNHCR R Cookbook](https://unhcr-web.github.io/unhcRstyle/inst/examples/How_to_quickly_produce_statistical_reports.html)
    * [Analysis Repository](http://analysis.unhcr.org) contribution
    * Word with UNHCR style
    * Powerpoint with UNHCR style

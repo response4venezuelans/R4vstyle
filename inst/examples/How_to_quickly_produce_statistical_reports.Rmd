@@ -1,29 +1,56 @@
 ---
-# This will appear in the cover page of your report
-title: "How to quickly produce statistical reports?"
+# Front cover title and subtitle. Also use in the running header thoughout the document
+title: "How to quickly produce reproducible statistical reports?"
 subtitle: "The UNHCR \"_R-Cookbook_\""
+# Abstract create an introduction box on the cover. Should be concise.
+#If you want want a full page image just remove abstract-title and abstract from the YAML
+abstract-title: Summary
+abstract: "This R cookbook is designed to make the process of creating publication-ready graphics and reports with UNHCR style a more __reproducible process__. As the styling is already built-in, users will be able to save time and focus on analysis narrative rather than on technical configuration. It shall support anyone who wants to make advanced graphics and gain efficiency in the generation of statistical reports."
+# Date is used in the running footer
 date: "`r Sys.Date()`"
-# Content of your abstract / executive summary
-abstract: |
-  This R cookbook is designed to make the process of creating publication-ready graphics and reports with UNHCR style a more __reproducible process__. As the styling is already built-in, users will be able to save time and focus on analysis narrative rather than on technical configuration. It shall support anyone who wants to make advanced graphics and gain efficiency in the generation of statistical reports. 
-# You can multiple author for the reports - they will be inserted in the last page
+# Author are the persons creating the doc. They won't appear in the doc but will be part of the DOM.
+# For the contact on the back cover, please refer to the bottom of the Rmd and ammend accordingly.
 author:
+  - name: Cedric Vidonne
+    affiliation: UNHCR
+    email: <Vidonne@unhcr.org
+    url: <https://www.unhcr.org>
   - name: Edouard Legoupil
     affiliation: UNHCR
     email: <legoupil@unhcr.org
     url: <https://www.unhcr.org>
-  - name: Romain Lesur
-    affiliation: Contributor
+
 output: 
-  unhcRstyle::unhcr_templ_paged:
-    # you can customise the name of TOC & Abstract below
-    toc-title: Contents
-    abstract-title: Executive Summary
-    # change to true for a self-contained document, but it'll be a litte slower for Pandoc to render
-    self_contained: true
+  unhcRstyle::unhcr_templ_paged: 
+    # Change to point to your cover file
+    front_cover: img/cover_placeholder_blue.jpg
+    # Try to keep as is it includes back cover UNHCR blue background and logo
+    back_cover: img/unhcr_backcover.svg
+    # Change to false to remove table of content
     toc: true
-    highlight: null
-    paged-footnotes: true
+    # Change to true to add number in front of chapters
+    number_sections: false
+    # Change to true for a self-contained document, but it'll be a litte slower for Pandoc to render
+    self_contained: true
+# Set  toc title, default none
+toc-title: Contents
+# Change to false to remove list of tables
+lot: true
+# Set lot title, default: "List of Tables"
+lot-title: "Tables"
+# Change to false to remove list of figures
+lof: true
+# Set lof title, default: "List of Figures"
+lof-title: "Figures"
+# If you include any <abbr> a list of abbreviations will be built.
+# Set lof title, default: "List of Abbreviations"
+loa-title: "Acronyms"
+# Include footnotes direclty in the related page
+paged-footnotes: true
+# Turn links to footnote when printing the PDF on/off
+links-to-footnotes: true
+# uncomment this line to produce HTML and PDF in RStudio:
+#knit: pagedown::chrome_print
 ---
 
 
@@ -170,7 +197,7 @@ This cookbook is based on real UNHCR data.
 
 Last Let's now download (& slightly tidy) data from UNHCR popstat API together with indicators from the World Bank and some geodata.
 
-```{r preparedata, message=FALSE, warning=FALSE}
+```{r preparedata, message=FALSE, warning=FALSE, cache=TRUE}
 
 time_series <-  unhcrdatapackage::end_year_population_totals
 
@@ -196,15 +223,18 @@ names(wb_data)[1] <- "CountryAsylumCode"
 names(wb_data)[2] <- "Year"
 
 ## Getting world map for mapping
-world <- ne_countries(scale = "small", returnclass = "sf")
-centroids <- st_transform(world$geometry, '+init=epsg:3857') %>%  
-  ## Reprojected in order to get centroid
-  st_centroid() %>% 
-  # this is the crs from d, which has no EPSG code:
-  st_transform(., '+init=epsg:4326') %>%
-  # since we want the centroids in long lat:
-  st_geometry()
-world_points <- cbind(world, st_coordinates(centroids))
+# world <- rnaturalearth::ne_countries(scale = "small", returnclass = "sf")
+#sf_extSoftVersion()[1:3]
+
+#st_crs(world$geometry) <- '+init=epsg:4326'  
+#centroids <- sf::st_transform(world$geometry, '+init=epsg:3857') %>%  
+#   ## Reprojected in order to get centroid
+#   st_centroid() %>% 
+#   # this is the crs from d, which has no EPSG code:
+#   st_transform(., '+init=epsg:4326') %>%
+#   # since we want the centroids in long lat:
+#   st_geometry()
+# world_points <- cbind(world, st_coordinates(centroids))
 
 ```
 
@@ -617,35 +647,35 @@ __Let's see what code is required for such chart: __
 ```{r , message = FALSE, warning = FALSE}
 
 # Merge data with geographic coordinates
-world <- merge(x = world , y = df2, by.y = "CountryAsylumCode" , by.x = "iso_a3")
-df3 <- merge(x = df2 , y = world_points, by.x = "CountryAsylumCode" , by.y = "iso_a3")
-
-
-# plot
-map <- ggplot(data = world) + 
-  geom_sf(fill = "antiquewhite", colour = "#7f7f7f", size = 0.2) + 
-  coord_sf(xlim = c(-25, 65), ylim = c(25, 75), expand = FALSE) + ## Clipping on Mediterranean Sea
-  geom_point(data = df3, aes(x = X, y = Y , size = Value2 ), 
-             alpha = 0.6, colour = "red") +
-  scale_size_area( max_size = 20) +
-  xlab("") +
-  ylab("") + 
-  ggtitle("Refugee Distribution") + 
-  unhcr_theme() +
-  theme(panel.grid.major = element_line(color = gray(.5), 
-                                        linetype = "dashed", size = 0.5),
-        panel.background = element_rect(fill = "aliceblue"),
-        axis.text.x  = element_blank(),
-        axis.text.y  = element_blank(),
-        legend.position = "none"
-        )
+# world <- merge(x = world , y = df2, by.y = "CountryAsylumCode" , by.x = "iso_a3")
+# df3 <- merge(x = df2 , y = world_points, by.x = "CountryAsylumCode" , by.y = "iso_a3")
+# 
+# 
+# # plot
+# map <- ggplot(data = world) + 
+#   geom_sf(fill = "antiquewhite", colour = "#7f7f7f", size = 0.2) + 
+#   coord_sf(xlim = c(-25, 65), ylim = c(25, 75), expand = FALSE) + ## Clipping on Mediterranean Sea
+#   geom_point(data = df3, aes(x = X, y = Y , size = Value2 ), 
+#              alpha = 0.6, colour = "red") +
+#   scale_size_area( max_size = 20) +
+#   xlab("") +
+#   ylab("") + 
+#   ggtitle("Refugee Distribution") + 
+#   unhcr_theme() +
+#   theme(panel.grid.major = element_line(color = gray(.5), 
+#                                         linetype = "dashed", size = 0.5),
+#         panel.background = element_rect(fill = "aliceblue"),
+#         axis.text.x  = element_blank(),
+#         axis.text.y  = element_blank(),
+#         legend.position = "none"
+#         )
 ```
 
 generate this chart:
 
 
 ```{r echo=FALSE, message = FALSE, warning = FALSE}
-map
+#map
 ```
 
 -----------------------------
@@ -1360,3 +1390,38 @@ ggpubr::ggarrange(left_align(highlighted , c("subtitle", "title")), ncol = 1, nr
 ```{r, include=FALSE}
 knitr::write_bib(c(.packages(), 'pagedown', 'xaringan'), 'index.bib')
 ```
+
+
+
+::: {.back-cover}
+
+::: {.back-header}
+<h1 class="back-title"></h1>
+<h1 class="back-subtitle"></h1>
+:::
+
+::: {.back-footer}
+For more information please contact:
+
+::: {.back-contact}
+[Cedric Vidonne]{.back-name}
+
+Information Management Officer / UNHCR
+
+[vidonne@unhcr.org](mailto:vidonne@unhcr.org)
+:::
+
+::: {.back-contact}
+[Contact2 Name]{.back-name}
+
+Snr Data Analysis Officer / UNHCR
+
+[legoupil@unhcr.org](mailto:legoupil@unhcr.org)
+:::
+
+:::
+
+:::
+
+
+
