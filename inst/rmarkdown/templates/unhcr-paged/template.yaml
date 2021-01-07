@@ -1,4 +1,4 @@
-name: "UNHCR paginated report"
+name: "UNHCR paginated html report"
 description: >
    Create a paged HTML paginated report with UNHCR Branding
 create_dir: FALSE

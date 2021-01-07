@@ -1,0 +1,33 @@
+---
+title: "Protection Monitoring Report"
+subtitle: "A collaborative review "
+author: " facilitated by UNHCR"
+date: "last update on `r Sys.Date()`"
+output:
+  unhcRstyle::unhcr_templ_book:
+  highlight: tango
+toc: TRUE
+toc_depth: 1
+split_by: chapter
+margin_references: FALSE
+css: unhcr_book.css
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(unhcRstyle)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('unhcRstyle'))
+options(htmltools.dir.version = FALSE)
+```
+
+# Introduction
+
+Styling based heavily on the [**tufte** package](https://github.com/rstudio/tufte). For HTML output, use `unhcRstyle::unhcr_templ_book` in the yaml header.
+
+
+```{r bib, include=FALSE}
+# create a bib file for the R packages used in this document
+knitr::write_bib(c('base', 'rmarkdown', 'bookdown', 'unhcRstyle'), file = 'skeleton.bib')
+```
