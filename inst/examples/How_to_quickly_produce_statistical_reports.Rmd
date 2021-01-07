@@ -5,7 +5,7 @@ subtitle: "The UNHCR \"_R-Cookbook_\""
 # Abstract create an introduction box on the cover. Should be concise.
 #If you want want a full page image just remove abstract-title and abstract from the YAML
 abstract-title: Summary
-abstract: "This R cookbook is designed to make the process of creating publication-ready graphics and reports with UNHCR style a more __reproducible process__. As the styling is already built-in, users will be able to save time and focus on analysis narrative rather than on technical configuration. It shall support anyone who wants to make advanced graphics and gain efficiency in the generation of statistical reports."
+abstract: "This R cookbook is designed to make the process of creating publication-ready graphics and reports with UNHCR style a more __reproducible process__. As the styling is already built-in through [unhcRstyle](https://unhcr-web.github.io/unhcRstyle/docs/) package, users will be able to save time and focus on analysis narrative rather than on technical configuration. It shall support anyone who wants to make advanced graphics and gain efficiency in the generation of statistical reports."
 # Date is used in the running footer
 date: "`r Sys.Date()`"
 # Author are the persons creating the doc. They won't appear in the doc but will be part of the DOM.
@@ -1412,7 +1412,7 @@ Information Management Officer / UNHCR
 :::
 
 ::: {.back-contact}
-[Contact2 Name]{.back-name}
+[Edouard Legoupil]{.back-name}
 
 Snr Data Analysis Officer / UNHCR
 
