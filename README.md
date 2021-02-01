@@ -74,16 +74,16 @@ This package requires a recent version of Pandoc (>= 2.2.3). If you use RStudio,
 
 ```r
 ## Use UNHCR Open data  - https://unhcr.github.io/unhcrdatapackage/docs/
-remotes::install_github('unhcr/unhcrdatapackage’)
+remotes::install_github('unhcr/unhcrdatapackage')
 
 ## API to connect to internal data source - https://unhcr-web.github.io/hcrdata/docs/
-remotes::install_github('unhcr-web/hcrdata’)
+remotes::install_github('unhcr-web/hcrdata')
 
 ## Perform High Frequency Check https://unhcr.github.io/HighFrequencyChecks/docs/
-remotes::install_github('unhcr/HighFrequencyChecks’)
+remotes::install_github('unhcr/HighFrequencyChecks')
 
 ## Process data crunching for survey dataset - https://unhcr.github.io/koboloadeR/docs/
-remotes::install_github('unhcr/koboloadeR’)
+remotes::install_github('unhcr/koboloadeR')
 
 ## Use UNHCR graphical template- https://unhcr-web.github.io/unhcRstyle/docs/
 remotes::install_github('unhcr-web/unhcRstyle')
