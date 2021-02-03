@@ -20,13 +20,21 @@ Imports:
     rmarkdown,
     stringr,
     magrittr,
-    pagedown,ggplot2, 
-    extrafont, 
-    scales, 
-    ragg, 
+    pagedown,
+    ggplot2,
+    extrafont,
+    scales,
+    ragg,
     tidyverse,
     unhcrdatapackage
-Suggests: promises, testit, xaringan, pdftools, revealjs
+Remotes:
+    unhcr/unhcrdatapackage
+Suggests:
+    promises,
+    testit,
+    xaringan,
+    pdftools,
+    revealjs
 License: MIT + file LICENSE
 URL: https://github.com/unhcr-web/unhcRstyle
 BugReports: https://github.com/unhcr-web/unhcRstyle/issues
