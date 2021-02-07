@@ -1,6 +1,6 @@
 ## alpha element_blank element_line element_rect element_text unit
 
-.onLoad <- function(libname = find.package("unhcRstyle"), pkgname = "unhcRstyle") {
+.onLoad <- function(libname = find.package("r4vstyle"), pkgname = "r4vstyle") {
 
 
   # CRAN Note avoidance

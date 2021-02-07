@@ -22,6 +22,7 @@ The [unhcRstyle](https://github.com/UNHCR-WEB/unhcRstyle) package sets the basic
 ## Set Up: load packages
 
 ```{r message=FALSE, warning=FALSE}
+library(r4vstyle)
 library(unhcRstyle)
 library(ggplot2)
 library(tidyverse)

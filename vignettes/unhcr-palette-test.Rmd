@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 ## Set Up: load packages
 
 ```{r}
+library(r4vstyle)
 library(unhcRstyle)
 library(ggplot2)
 library(scales)

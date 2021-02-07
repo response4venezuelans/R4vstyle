@@ -1,4 +1,4 @@
-#' \code{unhcRstyle} package
+#' \code{r4vstyle} package
 #'
 #' A collection of template, palettes and themes for plots, documents, and slides
 #' based on UNHCR branding
@@ -8,5 +8,5 @@
 #' @references https://unhcr-web.github.io/unhcRstyle/docs/
 #'
 #' @docType package
-#' @name unhcRstyle
+#' @name r4vstyle
 NULL

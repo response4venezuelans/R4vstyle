@@ -1,4 +1,4 @@
-Package: unhcRstyle
+Package: r4vstyle
 Type: Package
 Title: Use consistently UNHCR branding though preconfigured palette, ggplot2 themes and Rmd template
 Version: 0.1.0

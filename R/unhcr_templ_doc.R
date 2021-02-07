@@ -17,7 +17,7 @@ unhcr_templ_doc <- function(
 
   # locations of resource files in the package
   pkg_resource = function(...) {
-    system.file(..., package = "unhcRstyle")
+    system.file(..., package = "r4vstyle")
   }
 
   doctemp = pkg_resource("resources/style-unhcr-portrait.docx")
