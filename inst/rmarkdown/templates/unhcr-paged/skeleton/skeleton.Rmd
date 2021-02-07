@@ -19,7 +19,7 @@ author:
     email: <contact2email@unhcr.org>
 
 output: 
-  unhcRstyle::unhcr_templ_paged: 
+  r4vstyle::unhcr_templ_paged: 
     # Change to point to your cover file
     front_cover: img/cover_placeholder.jpg
     # Try to keep as is it includes back cover UNHCR blue background and logo
