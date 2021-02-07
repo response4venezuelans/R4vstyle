@@ -3,7 +3,7 @@ title: "Custom R Markdown Documents"
 author: ""
 date: ""
 output:
-  unhcRstyle::unhcr_templ_doc:
+  r4vstyle::unhcr_templ_doc:
     toc: true
 ---
 
