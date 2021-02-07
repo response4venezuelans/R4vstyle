@@ -17,7 +17,7 @@ unhcr_templ_html <- function(
 
   # locations of resource files in the package
   pkg_resource = function(...) {
-    system.file(..., package = "unhcRstyle")
+    system.file(..., package = "r4vstyle")
   }
 
   css    = pkg_resource("resources/unhcr-bootstrap.css")
