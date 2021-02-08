@@ -1,4 +1,17 @@
-# unhcRstyle
+# r4vstyle
+
+## NOTE NOTE NOTE
+
+ALL THE BELOW NEEDS TO BE DOCUMENTED AND UPDATED BASED ON unhRstyle
+
+FOR THE TIME BEING
+
+Install this package from Github:
+
+```r
+remotes::install_github('response4venezuelans/r4vstyle')
+```
+
 
 ## Content 
 
@@ -56,7 +69,7 @@ showtext_auto()
 Then, install this package from Github:
 
 ```r
-remotes::install_github('unhcr-web/unhcRstyle')
+remotes::install_github('response4venezuelans/r4vstyle')
 ```
 
 Once the package installed, you should be able to create directly your report with the right template within Rstudio:
