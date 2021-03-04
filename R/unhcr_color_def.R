@@ -52,7 +52,7 @@ unhcr_pal <- data.frame(                                 #  element:
   "blue2" = rgb(153, 199, 228, maxColorValue = 255),  #  2. blue2 (non-transparent):  40%
   "blue3" = rgb(102, 170, 215, maxColorValue = 255),  #  3. blue3 (non-transparent):  60%
   "blue4" = rgb( 51, 142, 201, maxColorValue = 255),  #  4. blue4 (non-transparent):  80%
-  "blue5" = rgb(  0, 114, 188, maxColorValue = 255),  #  5. blue5 (non-transparent): 100%: preferred color: "blue"
+  "blue5" = rgb(  0, 170, 172, maxColorValue = 255),  #  5. blue5 (non-transparent): 100%: preferred color: "blue"
   "black" = rgb(  0,   0,   0, maxColorValue = 255),  #  6. black: preferred color: "black"
   "grey5" = rgb( 51,  51,  51, maxColorValue = 255),  #  7. grey5 (non-transparent):  80% black
   "grey4" = rgb(102, 102, 102, maxColorValue = 255),  #  8. grey4 (non-transparent):  60% black
@@ -112,7 +112,7 @@ unhcr_pal_blue <- data.frame(                               #  element:
   "blue2" = rgb(153, 199, 228, maxColorValue = 255),  #  2. blue2 (non-transparent):  40%
   "blue3" = rgb(102, 170, 215, maxColorValue = 255),  #  3. blue3 (non-transparent):  60%
   "blue4" = rgb( 51, 142, 201, maxColorValue = 255),  #  4. blue4 (non-transparent):  80%
-  "blue5" = rgb(  0, 114, 188, maxColorValue = 255),  #  5. blue5 (non-transparent): 100%: preferred color: "Blue"
+  "blue5" = rgb(  0, 170, 173, maxColorValue = 255),  #  5. blue5 (non-transparent): 100%: preferred color: "Blue"
   "blue6" = rgb(  0,  86, 141, maxColorValue = 255),  #  5. blue6 (non-transparent): Darker shade
   stringsAsFactors = FALSE)
 
