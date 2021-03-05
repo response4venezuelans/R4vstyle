@@ -31,7 +31,7 @@ theme_foundation <- function(base_size=12, base_family="") {
 #' to use in \bold{ggplot2} commands.
 #'
 #' @param base_family Base font family (optional, character).
-#' Default: \code{base_family = "Lato"}.
+#' Default: \code{base_family = "Dosis"}.
 #' Options include \code{"mono"}, \code{"sans"} (default), and "serif".
 #' @param base_size Base font size (optional, numeric).
 #' Default: \code{base_size = 11}.
@@ -83,7 +83,7 @@ theme_foundation <- function(base_size=12, base_family="") {
 #'
 #' @import ggplot2
 
-unhcr_theme <- function(base_family="Lato",
+unhcr_theme <- function(base_family="Dosis",
                         base_size = 12,
                         plot_title_family=base_family,
                         plot_title_size = base_size*1.5,
@@ -263,7 +263,7 @@ unhcr_theme <- function(base_family="Lato",
 #' @param face font  face
 #' @param size font size
 #' @param color font color
-update_geom_font_defaults <- function(family="Lato", face="plain", size=3.5,
+update_geom_font_defaults <- function(family="Dosis", face="plain", size=3.5,
                                       color = grey(.15, 1)) {
   update_geom_defaults("text", list(family=family, face=face, size=size, color=color))
   update_geom_defaults("label", list(family=family, face=face, size=size, color=color))
