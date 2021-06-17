@@ -12,7 +12,7 @@ unhcr_pal_blue
 }
 \description{
 BLUE:  PANTONE 300 C/U / CMYK 99 50 0 0
-RGB 0 114 188 / HEX #0072BC
+RGB 0 114 188 / HEX #00AAAD
 \code{unhcr_pal_blue} provides an additional UNHCR color palette
 as a data frame containing 6 colors (shades of \code{\link{Blue}}).
 
@@ -25,15 +25,15 @@ dim(unhcr_pal_blue)  # 1 6
 
 # Preferred color:
 unhcr_pal_blue[5]    # preferred (named) color "blue5" (as df)
-unhcr_pal_blue[[5]]  # preferred color value "#0072BC"
+unhcr_pal_blue[[5]]  # preferred color value "#00AAAD"
 
 # Access by position:
 unhcr_pal_blue[5]    # named color "blue5" (as df)
-unhcr_pal_blue[[5]]  # color value "#0072BC"
+unhcr_pal_blue[[5]]  # color value "#00AAAD"
 
 # Access by name:
 unhcr_pal["blue5"]    # color "blue5" (as df)
-unhcr_pal[["blue5"]]  # color value "#0072BC"
+unhcr_pal[["blue5"]]  # color value "#00AAAD"
 
 # Plotting palette:
 seecol(unhcr_pal_blue)

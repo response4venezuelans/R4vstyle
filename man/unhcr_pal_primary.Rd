@@ -23,11 +23,11 @@ dim(unhcr_pal_primary)  # 1 4
 
 # Access by position:
 unhcr_pal_primary[1]    # color blue (as df)
-unhcr_pal_primary[[1]]  # color value "#0072BC"
+unhcr_pal_primary[[1]]  # color value "#00AAAD"
 
 # Access by name:
 unhcr_pal_primary["Blue"]   # color "blue5" (as df)
-unhcr_pal_primary[["Blue"]] # color value "#0072BC"
+unhcr_pal_primary[["Blue"]] # color value "#00AAAD"
 
 # Plotting palette:
 seecol(unhcr_pal_primary)

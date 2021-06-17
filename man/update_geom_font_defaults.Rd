@@ -5,7 +5,7 @@
 \title{Update matching font defaults for text geoms}
 \usage{
 update_geom_font_defaults(
-  family = "Lato",
+  family = "Dosis",
   face = "plain",
   size = 3.5,
   color = grey(0.15, 1)

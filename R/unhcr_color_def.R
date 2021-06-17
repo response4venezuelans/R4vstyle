@@ -27,11 +27,11 @@
 #'
 #' # Access by position:
 #' unhcr_pal[1]    # 1nd named color "blue5" (as df)
-#' unhcr_pal[[1]]  # 2nd color value "#0072BC"
+#' unhcr_pal[[1]]  # 2nd color value "#00AAAD"
 #'
 #' # Access by name:
 #' unhcr_pal["blue5"]    # color "blue5" (as df)
-#' unhcr_pal[["blue5"]]  # color value "#0072BC"
+#' unhcr_pal[["blue5"]]  # color value "#00AAAD"
 #'
 #' # Plotting palette:
 #' seecol(unhcr_pal)
@@ -48,10 +48,10 @@
 #' @export
 #'
 unhcr_pal <- data.frame(                                 #  element:
-  "blue1" = rgb(204, 227, 242, maxColorValue = 255),  #  1. blue1 (non-transparent):  20%
-  "blue2" = rgb(153, 199, 228, maxColorValue = 255),  #  2. blue2 (non-transparent):  40%
-  "blue3" = rgb(102, 170, 215, maxColorValue = 255),  #  3. blue3 (non-transparent):  60%
-  "blue4" = rgb( 51, 142, 201, maxColorValue = 255),  #  4. blue4 (non-transparent):  80%
+  "blue1" = rgb(  0, 170, 173, maxColorValue = 255),  #  1. blue1 (non-transparent):  20%
+  "blue2" = rgb(  0, 170, 173, maxColorValue = 255),  #  2. blue2 (non-transparent):  40%
+  "blue3" = rgb(  0, 170, 173, maxColorValue = 255),  #  3. blue3 (non-transparent):  60%
+  "blue4" = rgb(  0, 170, 173, maxColorValue = 255),  #  4. blue4 (non-transparent):  80%
   "blue5" = rgb(  0, 170, 173, maxColorValue = 255),  #  5. blue5 (non-transparent): 100%: preferred color: "blue"
   "black" = rgb(  0,   0,   0, maxColorValue = 255),  #  6. black: preferred color: "black"
   "grey5" = rgb( 51,  51,  51, maxColorValue = 255),  #  7. grey5 (non-transparent):  80% black
@@ -71,7 +71,7 @@ unhcr_pal <- unhcr_pal[c(5:1, 11:6)] # blue (1 as default) > white (6) > grey > 
 #'
 #' @description
 #' BLUE:  PANTONE 300 C/U / CMYK 99 50 0 0
-#' RGB 0 114 188 / HEX #0072BC
+#' RGB 0 114 188 / HEX #00AAAD
 #' \code{unhcr_pal_blue} provides an additional UNHCR color palette
 #' as a data frame containing 6 colors (shades of \code{\link{Blue}}).
 #'
@@ -83,15 +83,15 @@ unhcr_pal <- unhcr_pal[c(5:1, 11:6)] # blue (1 as default) > white (6) > grey > 
 #'
 #' # Preferred color:
 #' unhcr_pal_blue[5]    # preferred (named) color "blue5" (as df)
-#' unhcr_pal_blue[[5]]  # preferred color value "#0072BC"
+#' unhcr_pal_blue[[5]]  # preferred color value "#00AAAD"
 #'
 #' # Access by position:
 #' unhcr_pal_blue[5]    # named color "blue5" (as df)
-#' unhcr_pal_blue[[5]]  # color value "#0072BC"
+#' unhcr_pal_blue[[5]]  # color value "#00AAAD"
 #'
 #' # Access by name:
 #' unhcr_pal["blue5"]    # color "blue5" (as df)
-#' unhcr_pal[["blue5"]]  # color value "#0072BC"
+#' unhcr_pal[["blue5"]]  # color value "#00AAAD"
 #'
 #' # Plotting palette:
 #' seecol(unhcr_pal_blue)
@@ -129,7 +129,7 @@ unhcr_pal_blue <- data.frame(                               #  element:
 #' See \url{https://media.unhcr.org/archive/Brand-Book-for-external-partners-2CZ7A2P0CGAY.html} for details.
 #'
 #' @examples {
-#' unhcr_blue  # HEX character "#0072BC" (as value)
+#' unhcr_blue  # HEX character "#00AAAD" (as value)
 #' all.equal(unhcr_blue, unhcr_pal_blue[[5]])  # TRUE (same HEX values)
 #'
 #' seecol(unhcr_blue)  # view color and details
@@ -602,11 +602,11 @@ names(unhcr_red) <- "Red"
 #'
 #' # Access by position:
 #' unhcr_pal_primary[1]    # color blue (as df)
-#' unhcr_pal_primary[[1]]  # color value "#0072BC"
+#' unhcr_pal_primary[[1]]  # color value "#00AAAD"
 #'
 #' # Access by name:
 #' unhcr_pal_primary["Blue"]   # color "blue5" (as df)
-#' unhcr_pal_primary[["Blue"]] # color value "#0072BC"
+#' unhcr_pal_primary[["Blue"]] # color value "#00AAAD"
 #'
 #' # Plotting palette:
 #' seecol(unhcr_pal_primary)
@@ -648,11 +648,11 @@ unhcr_pal_primary <- data.frame( # Element:
 #'
 #' # Access by position:
 #' unhcr_pal_graphic[1]    # color blue (as df)
-#' unhcr_pal_graphic[[1]]  # color value "#0072BC"
+#' unhcr_pal_graphic[[1]]  # color value "#00AAAD"
 #'
 #' # Access by name:
 #' unhcr_pal_graphic["Blue"]   # color "blue5" (as df)
-#' unhcr_pal_graphic[["Blue"]] # color value "#0072BC"
+#' unhcr_pal_graphic[["Blue"]] # color value "#00AAAD"
 #'
 #' # Plotting palette:
 #' seecol(unhcr_pal_graphic)

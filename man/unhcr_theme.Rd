@@ -5,7 +5,7 @@
 \title{Basic UNHCR theme for ggplot2}
 \usage{
 unhcr_theme(
-  base_family = "Lato",
+  base_family = "Dosis",
   base_size = 12,
   plot_title_family = base_family,
   plot_title_size = base_size * 1.5,
@@ -41,7 +41,7 @@ unhcr_theme(
 }
 \arguments{
 \item{base_family}{Base font family (optional, character).
-Default: \code{base_family = "Lato"}.
+Default: \code{base_family = "Dosis"}.
 Options include \code{"mono"}, \code{"sans"} (default), and "serif".}
 
 \item{base_size}{Base font size (optional, numeric).
